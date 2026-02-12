@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine, Yana? 💕</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 💌 Envelope Screen -->
+<div class="envelope-screen">
+  <div class="envelope" id="envelope">💌</div>
+  <p>Click to Open</p>
+</div>
+
+<!-- 💕 Letter Screen -->
+<div class="letter-screen hidden">
+  <div class="letter-container">
+    <h1 id="question">Will you be my Valentine, Yana? 💖</h1>
+
+    <!-- 🐶 Dancing Dachshund -->
+    <div class="dog-wrapper" id="dance-dog">
+      <div class="dog"></div>
+    </div>
+
+    <!-- 💖 Big Heart Dachshund (hidden at first) -->
+    <div class="heart-dog-wrapper hidden" id="heart-dog">
+      <img src="heart-dachshund.png" class="heart-dog">
+    </div>
+
+    <div class="buttons">
+      <button id="yes-btn">Yes 💕</button>
+      <button id="no-btn">No 😢</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
