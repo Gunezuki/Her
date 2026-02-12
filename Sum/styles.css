@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #ffd6e8, #ffeaf4);
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.envelope-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.envelope {
+  font-size: 80px;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.letter-screen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-container {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255,105,180,0.3);
+}
+.dog-wrapper {
+  width: 256px;
+  margin: 20px auto;
+}
+
+.dog {
+  width: 256px;
+  height: 256px;
+  background: url("dancing-dachshund.png") 0 0 no-repeat;
+  background-size: 1024px 256px; /* 4 frames */
+  animation: dance 0.8s steps(4) infinite,
+             bounce 1s ease-in-out infinite;
+  image-rendering: pixelated;
+}
+
+@keyframes dance {
+  from { background-position: 0 0; }
+  to { background-position: -1024px 0; }
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.heart-dog-wrapper {
+  margin: 20px auto;
+}
+
+.heart-dog {
+  width: 300px;
+  image-rendering: pixelated;
+  animation: cuteMove 2.5s ease-in-out infinite;
+}
+
+@keyframes cuteMove {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  25% { transform: translateY(-10px) rotate(-2deg) scale(1.05); }
+  50% { transform: translateY(0) rotate(2deg) scale(1); }
+  75% { transform: translateY(-10px) rotate(-2deg) scale(1.05); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+button {
+  margin: 10px;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  transition: 0.3s;
+}
+
+#yes-btn {
+  background-color: #ff4d88;
+  color: white;
+}
+
+#no-btn {
+  background-color: #999;
+  color: white;
+}
